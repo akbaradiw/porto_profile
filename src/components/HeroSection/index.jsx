@@ -20,13 +20,7 @@ const HeroSection = () => {
         <h1 className="pt-2 pb-2 ps-10 text-4xl font-semibold animate-bounce">
           Front End Web Developer
         </h1>
-        {/* <p className="ps-10 pt-2 text-base  ">
-          I'm join front end developer
-          bootcamp at Binar Academy in October 2023 - February 2024. During in
-          this bootcamp I learn about HTML, CSS, Javascript, React, Next js,
-          Bootstarp, Tailwind, Responsive web design & build car rental website
-          for final project.
-        </p> */}
+     
     
       </div>
       {/* <div>
