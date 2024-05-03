@@ -10,6 +10,8 @@ const NavbarComp = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+
   return (
     <div>
       <nav className="bg-black p-4 fixed w-full top-0 z-10">
@@ -26,10 +28,10 @@ const NavbarComp = () => {
               Home
             </a>
             </Link>
-            <Link to="/about">
+            <Link className="transition-all duration-300 ease-in-out" to="/about">
             <a
               href="#"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md "
             >
               About
             </a>
