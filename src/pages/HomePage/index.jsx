@@ -3,20 +3,16 @@ import NavbarComp from "../../components/NavbarComp";
 import HeroSection from "../../components/HeroSection";
 import ImageComp from "../../components/ImageComp";
 import { IoLogoGithub } from "react-icons/io";
-
-
+import "./style.css";
 
 import Cover from "../../components/Cover";
 const HomePage = () => {
   return (
     <div>
       <NavbarComp />
-      <div className="flex justify-evenly mt-40">
-        
+      <div className="flex justify-center mt-40" id="home">
         <ImageComp />
-        <HeroSection/>
-      </div>
-      <div>
+        <HeroSection />
       </div>
     </div>
   );

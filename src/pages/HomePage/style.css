@@ -1,0 +1,7 @@
+@media screen and (max-width: 500px) {
+    #home {
+        display: grid;
+        grid-template-columns: 550px 220px;
+        
+    }
+}

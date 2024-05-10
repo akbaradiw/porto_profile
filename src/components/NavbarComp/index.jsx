@@ -14,16 +14,16 @@ const NavbarComp = () => {
 
   return (
     <div>
-      <nav className="bg-black p-4 fixed w-full top-0 z-10">
+      <nav className="bg-black p-4 fixed w-full top-0 z-10" id="navbar">
         <div className="container mx-auto flex justify-between items-center">
-          <div>
+          {/* <div>
            <img id="flower" src={flower} alt="kuuga" className="w-10" />
-          </div>
+          </div> */}
           <div className="hidden md:block">
             <Link to="/">
             <a
               href="#"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md "
             >
               Home
             </a>
@@ -51,7 +51,7 @@ const NavbarComp = () => {
               Contact
             </a>
           </div>
-          <div className="md:hidden">
+          <div className="sm:hidden" id="mobile-menu">
             <button
               onClick={toggleMobileMenu}
               className="text-gray-300 hover:text-white focus:outline-none"
@@ -74,8 +74,8 @@ const NavbarComp = () => {
         </div>
         {/* Conditional rendering of mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-gray-800">
-            <div className="px-2 py-3">
+          <div className="sm:hidden bg-black" >
+            <div className="px-2 py-3" >
               <a
                 href="#"
                 className="block text-gray-300 hover:text-white px-4 py-2 rounded-md"

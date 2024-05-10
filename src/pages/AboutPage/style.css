@@ -1,0 +1,6 @@
+@media screen and (max-width: 500px) {
+    #about {
+        display: grid;
+        grid-template-columns: 550px 
+    }
+}

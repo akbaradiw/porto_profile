@@ -5,6 +5,8 @@ import project2 from "../../assets/Dashboard.png";
 import project3 from "../../assets/simplenote.png";
 import project4 from "../../assets/ecommerce.png";
 import { motion } from "framer-motion";
+import { CiLink } from "react-icons/ci";
+
 
 const Project = () => {
   const myproject = [
@@ -24,7 +26,7 @@ const Project = () => {
       name: "Car Rental CMS",
       technologies: "React, Bootstrap, Javascript, Redux Toolkit",
       description:
-        "this anotherproject i developed with my team during front end developer bootcamp at binar academy. in this project i tested and learn more about CRUD feature.",
+        "this another project i developed with my team during front end developer bootcamp at binar academy. in this project i tested and learn more about CRUD feature.",
       image: project2,
       link: "https://admin-23001028-14-kelompok-4-binar-car-rental-platinum.vercel.app/",
       github:
@@ -55,30 +57,32 @@ const Project = () => {
     <div>
       <NavbarComp />
       <div className="flex justify-center mt-20 ">
-        <div className="pt-40 w-3/4  grid grid-cols-2 gap-6">
+        <div className="pt-40 w-3/4  grid grid-cols-2 gap-10">
+
           {myproject.map((project) => (
             <div
               className="border-2 border-dotted  shadow-4xl shadow-black rounded-3xl  border-black"
               key={project.id}
+
             >
-              <div className="flex justify-center">
-                <motion.div
-                  initial={{ opacity: 0, x: -50, y: 150 }}
+                  <motion.div
+                  initial={{ opacity: 0, x: -60, y: 140 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{ duration: 2, ease: "easeInOut" }}
                 >
+              <div className="flex justify-center">
+            
                   <img
-                    className="pt-10 px-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 "
+                    className="pt-10 px-10 transition ease-in-out delay-150 hover:-translate-y-5 hover:scale-110 duration-300 hover:opacity-60"
                     src={project.image}
                     alt={project.name}
                   />
-                </motion.div>
               </div>
               <div>
                 <motion.div
                  initial={{ opacity: 0, x: -50, y: -50 }}
                  animate={{ opacity: 1, x: 0, y: 0 }}
-                 transition={{ duration: 2, ease: "easeInOut" }}>
+                 transition={{ duration: 1, ease: "easeInOut" }}>
                   <div className="flex justify-center pt-3">
                     <h1 className="text-lg text-black font-bold">
                       {project.name}
@@ -98,14 +102,14 @@ const Project = () => {
                 </motion.div>
               </div>
 
-              <div className="flex justify-center gap-5 pb-5">
+              <div className="flex justify-center gap-5 pb-5 pt-2">
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="bg-black text-white font-bold py-2 px-4 rounded ">
-                    Visit
+                  <button className="border-black border-2 text-black font-bold hover:bg-yellow-300 py-2 px-4 rounded hover:-translate-y-3 hover:scale-110 duration-300  ">
+                    Demo
                   </button>
                 </a>
                 <a
@@ -113,11 +117,13 @@ const Project = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="bg-black text-white font-bold py-2 px-4 rounded">
-                    Github
+                  <button className="border-black border-2 text-black hover:bg-yellow-300 font-bold py-2 px-4 rounded hover:-translate-y-3 hover:scale-110 duration-300">
+                    Github/Code
                   </button>
                 </a>
               </div>
+              </motion.div>
+
             </div>
           ))}
         </div>

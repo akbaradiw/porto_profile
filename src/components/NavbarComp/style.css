@@ -1,4 +1,6 @@
-#flower {
-    width: 60px;
-
+@media screen and (max-width: 400px) {
+  #mobile-menu {
+    padding-right: 10px;
+    margin-right: 2px;
+  }
 }
