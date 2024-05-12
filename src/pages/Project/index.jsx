@@ -5,8 +5,7 @@ import project2 from "../../assets/Dashboard.png";
 import project3 from "../../assets/simplenote.png";
 import project4 from "../../assets/ecommerce.png";
 import { motion } from "framer-motion";
-import { CiLink } from "react-icons/ci";
-
+import "./style.css";
 
 const Project = () => {
   const myproject = [
@@ -56,74 +55,93 @@ const Project = () => {
   return (
     <div>
       <NavbarComp />
-      <div className="flex justify-center mt-20 ">
-        <div className="pt-40 w-3/4  grid grid-cols-2 gap-10">
-
+      <div className="flex justify-center  mb-10">
+        <div className="pt-40 w-3/4  grid grid-cols-2 gap-10 " id="project">
           {myproject.map((project) => (
             <div
-              className="border-2 border-dotted  shadow-4xl shadow-black rounded-3xl  border-black"
+              className="border-2 border-dotted relative shadow-4xl shadow-black rounded-3xl  border-black"
+              id="project-border"
               key={project.id}
-
             >
-                  <motion.div
-                  initial={{ opacity: 0, x: -60, y: 140 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  transition={{ duration: 2, ease: "easeInOut" }}
-                >
-              <div className="flex justify-center">
-            
+              <motion.div
+                initial={{ opacity: 0, x: -60, y: 140 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ duration: 2, ease: "easeInOut" }}
+              >
+                <div className="flex justify-center" id="project-image">
                   <img
                     className="pt-10 px-10 transition ease-in-out delay-150 hover:-translate-y-5 hover:scale-110 duration-300 hover:opacity-60"
                     src={project.image}
                     alt={project.name}
                   />
-              </div>
-              <div>
-                <motion.div
-                 initial={{ opacity: 0, x: -50, y: -50 }}
-                 animate={{ opacity: 1, x: 0, y: 0 }}
-                 transition={{ duration: 1, ease: "easeInOut" }}>
-                  <div className="flex justify-center pt-3">
-                    <h1 className="text-lg text-black font-bold">
-                      {project.name}
-                    </h1>
-                  </div>
+                </div>
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, x: -50, y: -50 }}
+                    animate={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ duration: 1, ease: "easeInOut" }}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    <div>
+                      <div className="flex justify-center pt-3">
+                        <h1
+                          className="text-lg text-black font-bold"
+                          id="project-name"
+                        >
+                          {project.name}
+                        </h1>
+                      </div>
 
-                  <div className="flex justify-center pt-3">
-                    <p className="text-md text-black font-bold">
-                      Technologies: {project.technologies}
-                    </p>
-                  </div>
-                  <div className="flex justify-center py-3">
-                    <p className=" text-black w-3/4 font-sm ps-3">
-                      {project.description}
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
+                      <div className="flex justify-center pt-3">
+                        <p
+                          className="text-md text-black font-bold"
+                          id="project-tech"
+                        >
+                          Technologies: {project.technologies}
+                        </p>
+                      </div>
+                      <div className="flex justify-center py-3">
+                        <p
+                          className=" text-black w-3/4 font-sm ps-3"
+                          id="project-description"
+                        >
+                          {project.description}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
 
-              <div className="flex justify-center gap-5 pb-5 pt-2">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <div
+                  className="flex justify-center gap-5 pb-5 pt-2"
+                  id="project-button"
                 >
-                  <button className="border-black border-2 text-black font-bold hover:bg-yellow-300 py-2 px-4 rounded hover:-translate-y-3 hover:scale-110 duration-300  ">
-                    Demo
-                  </button>
-                </a>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="border-black border-2 text-black hover:bg-yellow-300 font-bold py-2 px-4 rounded hover:-translate-y-3 hover:scale-110 duration-300">
-                    Github/Code
-                  </button>
-                </a>
-              </div>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button
+                      id="demo"
+                      className="border-black border-2 text-black font-bold hover:bg-yellow-300 py-2 px-4 rounded hover:-translate-y-3 hover:scale-110 duration-300 "
+                    >
+                      Demo
+                    </button>
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button
+                      id="github"
+                      className="border-black border-2 text-black hover:bg-yellow-300 font-bold py-2 px-4 rounded hover:-translate-y-3 hover:scale-110 duration-300"
+                    >
+                      Github/Code
+                    </button>
+                  </a>
+                </div>
               </motion.div>
-
             </div>
           ))}
         </div>

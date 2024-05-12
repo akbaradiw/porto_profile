@@ -1,5 +1,6 @@
 @media screen and (max-width: 1050px) {
-    #about {
-        display: grid;
+    #skills {
+        width: 200px;
     }
+    
 }

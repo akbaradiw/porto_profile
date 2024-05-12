@@ -1,7 +1,16 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
     #home {
         display: grid;
         grid-template-columns: 550px 220px;
         
     }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 550px) {
+    #home {
+        display: grid;
+        
+        
+    }
+    
 }

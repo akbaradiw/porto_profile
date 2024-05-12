@@ -3,7 +3,7 @@
   padding: 50px
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
 
 
   #fotoku {
@@ -22,3 +22,24 @@
     
   }
 }
+
+@media screen and (max-width: 1000px) and (min-width: 550px) {
+  #fotoku {
+    margin-left: 220px;
+    padding: 15px;
+    width:350px;
+  }
+
+  #imageComp {
+    margin-top: 5px;
+  }
+
+  #contact {
+    margin-left: 215px;
+    margin-top: 10px;
+    
+  }
+ 
+  
+}
+

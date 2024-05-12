@@ -8,7 +8,7 @@ const AboutPage = () => {
   return (
     <div>
       <NavbarComp />
-      <div className="flex justify-center mt-40" id="about">
+      <div className="grid mt-40" id="about">
           <Paragraph />
           <Cover />
       </div>

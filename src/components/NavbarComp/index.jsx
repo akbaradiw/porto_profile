@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import kuuga from "../../assets/path3356.png";
 import flower from "../../assets/rainbow_flower.png";
 import "./style.css";
@@ -14,47 +14,42 @@ const NavbarComp = () => {
 
   return (
     <div>
-      <nav className="bg-black p-4 fixed w-full top-0 z-10" id="navbar">
+      <nav className="bg-black p-4 fixed w-full top-0 z-10  " id="navbar">
         <div className="container mx-auto flex justify-between items-center">
           {/* <div>
            <img id="flower" src={flower} alt="kuuga" className="w-10" />
           </div> */}
           <div className="hidden md:block">
-            <Link to="/">
+            <NavLink to="/">
             <a
               href="#"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md "
+              className="text-gray-50 hover:text-yellow-300 px-3 py-2 rounded-md "
             >
               Home
             </a>
-            </Link>
-            <Link className="transition-all duration-300 ease-in-out" to="/about">
+            </NavLink>
+            <NavLink className="transition-all duration-300 ease-in-out" to="/about">
             <a
               href="#"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md "
+              className="text-gray-50 hover:text-yellow-300 px-3 py-2 rounded-md  "
             >
               About
             </a>
-            </Link>
-            <Link to="/project">
+            </NavLink>
+            <NavLink to="/project">
             <a
               href="#"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md"
+              className="text-gray-50 hover:text-yellow-300 px-3 py-2 rounded-md"
             >
               Project
             </a>
-            </Link>
-            <a
-              href="#"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md"
-            >
-              Contact
-            </a>
+            </NavLink>
+
           </div>
           <div className="sm:hidden" id="mobile-menu">
             <button
               onClick={toggleMobileMenu}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-gray-300 hover:text-yellow-300 focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -76,24 +71,30 @@ const NavbarComp = () => {
         {isMobileMenuOpen && (
           <div className="sm:hidden bg-black" >
             <div className="px-2 py-3" >
+              <NavLink to="/">
               <a
                 href="#"
-                className="block text-gray-300 hover:text-white px-4 py-2 rounded-md"
+                className="block text-gray-50 hover:text-yellow-300 px-4 py-2 rounded-md"
               >
                 Home
               </a>
+              </NavLink>
+              <NavLink to="/about">
               <a
                 href="#"
-                className="block text-gray-300 hover:text-white px-4 py-2 rounded-md"
+                className="block text-gray-50 hover:text-yellow-300 px-4 py-2 rounded-md"
               >
                 About
               </a>
+              </NavLink>
+              <NavLink to="/project">
               <a
                 href="#"
-                className="block text-gray-300 hover:text-white px-4 py-2 rounded-md"
+                className="block text-gray-50 hover:text-yellow-300 px-4 py-2 rounded-md"
               >
-                Contact
+                Project
               </a>
+              </NavLink>
             </div>
           </div>
         )}

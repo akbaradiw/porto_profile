@@ -6,19 +6,18 @@ const Paragraph = () => {
   return (
     <div>
       <div
-        className="text-2xl text-black 
- px-40"
-        id="paragraph"
+        className="text-2xl text-black ps-20
+"
       >
         <motion.div
           initial={{ opacity: 0, x: -50, y: -50 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 2, ease: "easeInOut" }}
         >
-          <h2 className="ms-40 pb-5 text-4xl font-bold text-black underline underline-offset-8 ">
+          <h2 className=" pb-4  font-bold text-black underline underline-offset-8 ">
             About Me
           </h2>{" "}
-          <p>
+          <p id="paragraph">
             My Name is Akbar Adi Wibowo, i have 4 years experience work as
             business development administrator. I'm join front end developer
             bootcamp at Binar Academy in October 2023 - February 2024. During in
