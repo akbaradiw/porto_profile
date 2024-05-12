@@ -34,7 +34,9 @@ const ImageComp = () => {
           >
             <BsGithub />
           </a>
-          <a className="hover:-translate-y-3 hover:scale-110 duration-300">
+          <a className="hover:-translate-y-3 hover:scale-110 duration-300"
+          href="https://wa.me/qr/RUKJ3LDQ6NUZD1">
+            
             <BsWhatsapp />
           </a>
         </div>
