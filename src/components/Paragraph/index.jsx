@@ -17,13 +17,8 @@ const Paragraph = () => {
           <h2 className=" pb-4  font-bold text-black underline underline-offset-8 ">
             About Me
           </h2>{" "}
-          <p id="paragraph">
-            My Name is Akbar Adi Wibowo, i have 4 years experience work as
-            business development administrator. I'm join front end developer
-            bootcamp at Binar Academy in October 2023 - February 2024. During in
-            this bootcamp I learn about HTML, CSS, Javascript, React, Next js,
-            Bootstarp, Tailwind, Responsive web design & build car rental
-            website for final project.
+          <p id="paragraph" className="ps-2">
+          My Name is Akbar Adi Wibowo, i have 4 years work experience as business development administrator. In my current activity i learn about Front End Development to improve my skill after graduate from Front End Engineering bootcamp at Binar Academy in October 2023 - February 2024.
           </p>
         </motion.div>
       </div>
