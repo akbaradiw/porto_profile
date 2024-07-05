@@ -4,8 +4,10 @@ import project1 from "../../assets/LandingPage.png";
 import project2 from "../../assets/Dashboard.png";
 import project3 from "../../assets/simplenote.png";
 import project4 from "../../assets/ecommerce.png";
+import project5 from "../../assets/tokusatu.png";
+import { BsLink, BsGithub } from "react-icons/bs";
+
 import { motion } from "framer-motion";
-import "./style.css";
 
 const Project = () => {
   const myproject = [
@@ -35,7 +37,7 @@ const Project = () => {
       id: 3,
       name: "Simple Note App",
       technologies: "React, Tailwind, Javascript, Redux Toolkit",
-      description: "i try CRUD with redux toolkit to developed this project",
+      description: "i try CRUD with redux toolkit to developed this project.",
       image: project3,
       link: "https://simple-note-livid.vercel.app/",
       github: "https://github.com/akbaradiw/crud_redux_toolkit",
@@ -50,101 +52,63 @@ const Project = () => {
       link: "https://mini-ecommerce-web.vercel.app/",
       github: "https://github.com/akbaradiw/mini-ecommerce",
     },
+    {
+      id: 5,
+      name: "Tokusatsu Hero Agency",
+      technologies: "Next Js, Tailwind, Javascript",
+      description:
+        "Landing page with filter features. i developed this to learn about use next js. data in this website is a dummy data.",
+      image: project5,
+      link: "https://tokusatsu-hero-agency.vercel.app/",
+      github: "https://github.com/akbaradiw/tokusatsu-hero-agency",
+    },
   ];
 
   return (
     <div>
       <NavbarComp />
-      <div className="flex justify-center  mb-10">
-        <div className="pt-40 w-3/4  grid grid-cols-2 gap-10 " id="project">
-          {myproject.map((project) => (
-            <div
-              className="border-2 border-dotted relative shadow-4xl shadow-black rounded-3xl  border-black"
-              id="project-border"
-              key={project.id}
-            >
-              <motion.div
-                initial={{ opacity: 0, x: -60, y: 140 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ duration: 2, ease: "easeInOut" }}
-              >
-                <div className="flex justify-center" id="project-image">
-                  <img
-                    className="pt-10 px-10 transition ease-in-out delay-150 hover:-translate-y-5 hover:scale-110 duration-300 hover:opacity-60"
-                    src={project.image}
-                    alt={project.name}
-                  />
-                </div>
-                <div>
-                  <motion.div
-                    initial={{ opacity: 0, x: -50, y: -50 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ duration: 1, ease: "easeInOut" }}
-                    whileHover={{ opacity: 1 }}
-                  >
-                    <div>
-                      <div className="flex justify-center pt-3">
-                        <h1
-                          className="text-lg text-black font-bold"
-                          id="project-name"
-                        >
-                          {project.name}
-                        </h1>
-                      </div>
-
-                      <div className="flex justify-center pt-3">
-                        <p
-                          className="text-md text-black font-bold"
-                          id="project-tech"
-                        >
-                          Technologies: {project.technologies}
-                        </p>
-                      </div>
-                      <div className="flex justify-center py-3">
-                        <p
-                          className=" text-black w-3/4 font-sm ps-3"
-                          id="project-description"
-                        >
-                          {project.description}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
-
-                <div
-                  className="flex justify-center gap-5 pb-5 pt-2"
-                  id="project-button"
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-12 lg:gap-16 pt-40 pb-40 px-10 ">
+        {myproject.map((data) => (
+          <motion.div
+            initial={{ opacity: 0, x: -50, y: -50 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+          >
+            <div key={data.id}>
+              <img
+                src={data.image}
+                alt={data.description}
+                width={500}
+                height={500}
+                className="rounded-lg shadow-lg mb-6 hover:scale-110 transition ease-in-out delay-150"
+              />
+              <p className="border-b text-black text-sm md:text-base lg:text-base border-black pb-3">
+                {data.description}
+              </p>
+              <p className="border-b font-bold text-black md:text-base lg:text-base text-sm border-black py-3">
+                Technologies: {data.technologies}
+              </p>
+              <div className=" flex justify-start lg:text-3xl text-2xl gap-3 lg:py-2 pt-2 pb-10">
+                <a
+                  href={data.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:-translate-y-3 hover:scale-110 duration-300"
                 >
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button
-                      id="demo"
-                      className="border-black border-2 text-black font-bold hover:bg-yellow-300 py-2 px-4 rounded hover:-translate-y-3 hover:scale-110 duration-300 "
-                    >
-                      Demo
-                    </button>
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button
-                      id="github"
-                      className="border-black border-2 text-black hover:bg-yellow-300 font-bold py-2 px-4 rounded hover:-translate-y-3 hover:scale-110 duration-300"
-                    >
-                      Github/Code
-                    </button>
-                  </a>
-                </div>
-              </motion.div>
+                  <BsLink />
+                </a>
+                <a
+                  href={data.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:-translate-y-3 hover:scale-110 duration-300"
+                >
+                  <BsGithub />
+                </a>
+              </div>
             </div>
-          ))}
-        </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

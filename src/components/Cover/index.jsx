@@ -1,7 +1,7 @@
 import React from "react";
-import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript } from "react-icons/io";
-import { FaReact, FaBootstrap, FaGitAlt } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript,  } from "react-icons/io";
+import { FaReact, FaBootstrap, FaGitAlt,  } from "react-icons/fa";
+import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { SiRedux } from "react-icons/si";
 import "./style.css";
 import { motion } from "framer-motion";
@@ -29,6 +29,7 @@ const Cover = () => {
             <RiTailwindCssFill />
             <FaGitAlt />
             <SiRedux />
+            <RiNextjsFill />
           </div>
         </motion.div>
       </div>

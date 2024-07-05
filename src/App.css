@@ -1,5 +1,11 @@
 body {
-    background-color: rgb(245, 206, 99);
+    /* background-color: rgb(245, 206, 99); */
     margin: 0px;
     padding: 0px;
+    background-image: linear-gradient(
+        to right,
+        rgb(245, 221, 99),
+        rgb(255, 255, 255),
+        rgb(238, 245, 99),
+        rgb(245, 238, 99));
 }
