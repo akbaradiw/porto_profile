@@ -59,8 +59,8 @@ const Project = () => {
       description:
         "Landing page with filter features. i developed this to learn about use next js. data in this website is a dummy data.",
       image: project5,
-      link: "https://tokusatsu-hero-agency.vercel.app/",
-      github: "https://github.com/akbaradiw/tokusatsu-hero-agency",
+      link: "https://tokusatsu-heroes-agency.vercel.app/",
+      github: "https://github.com/akbaradiw/Tokusatsu-Heroes-Agency",
     },
   ];
 
