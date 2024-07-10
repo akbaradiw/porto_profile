@@ -1,23 +1,27 @@
 import React from "react";
-import fotoku from "../../assets/fotoku.png";
-import fotoprofil from "../../assets/fotoprofil.png";
 import foto from "../../assets/foto.png";
-import "./style.css";
 import { motion } from "framer-motion";
-import responsive from "../../responsive";
 import { BsLinkedin, BsGithub, BsWhatsapp } from "react-icons/bs";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const ImageComp = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
   
   return (
-    <div className="pe-80 mt-20" id="imageComp">
+    <div className="mt-10 lg:mt-40 lg:flex md:grid md:grid-cols-2 md:gap-10 px-10 lg:justify-evenly" id="imageComp">
       <motion.div
-        initial={{ opacity: 0, x: -50, y: -50 }}
+        initial={{ opacity: 0, x: -30, y: -10 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
       >
         <img
           id="fotoku"
-          className="rounded-md  border-black pb-6 border-5 border-double "
+          className="rounded-md lg:w-96 p-4 w-80 border-black pb-6 border-5 border-double "
           src={foto}
           alt="test"
         />
@@ -41,6 +45,12 @@ const ImageComp = () => {
           </a>
         </div>
       </motion.div>
+      <div className="lg:pt-20 pt-10" data-aos="fade-left" data-aos-duration="1000">
+      <h1 className=" lg:text-6xl text-4xl font-bold">Akbar Adi Wibowo</h1>
+      <p className="lg:text-4xl text-2xl font-semibold py-4">Front End Web Developer</p>
+      <p className="lg:text-2xl text-xl">Based in Yogyakarta</p>
+      </div>
+   
     </div>
   );
 };

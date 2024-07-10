@@ -6,8 +6,9 @@ import project3 from "../../assets/simplenote.png";
 import project4 from "../../assets/ecommerce.png";
 import project5 from "../../assets/tokusatu.png";
 import { BsLink, BsGithub } from "react-icons/bs";
-
-import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Project = () => {
   const myproject = [
@@ -63,51 +64,52 @@ const Project = () => {
       github: "https://github.com/akbaradiw/Tokusatsu-Heroes-Agency",
     },
   ];
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <div>
       <NavbarComp />
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-12 lg:gap-16 pt-40 pb-40 px-10 ">
+      <div
+        className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-12 lg:gap-16 lg:pt-40 pt-10 pb-40 px-10"
+        data-aos="fade-up"
+        data-aos-duration="500"
+      >
         {myproject.map((data) => (
-          <motion.div
-            initial={{ opacity: 0, x: -50, y: -50 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ duration: 2, ease: "easeInOut" }}
-          >
-            <div key={data.id}>
-              <img
-                src={data.image}
-                alt={data.description}
-                width={500}
-                height={500}
-                className="rounded-lg shadow-lg mb-6 hover:scale-110 transition ease-in-out delay-150"
-              />
-              <p className="border-b text-black text-sm md:text-base lg:text-base border-black pb-3">
-                {data.description}
-              </p>
-              <p className="border-b font-bold text-black md:text-base lg:text-base text-sm border-black py-3">
-                Technologies: {data.technologies}
-              </p>
-              <div className=" flex justify-start lg:text-3xl text-2xl gap-3 lg:py-2 pt-2 pb-10">
-                <a
-                  href={data.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:-translate-y-3 hover:scale-110 duration-300"
-                >
-                  <BsLink />
-                </a>
-                <a
-                  href={data.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:-translate-y-3 hover:scale-110 duration-300"
-                >
-                  <BsGithub />
-                </a>
-              </div>
+          <div key={data.id}>
+            <img
+              src={data.image}
+              alt={data.description}
+              width={500}
+              height={500}
+              className="rounded-lg shadow-lg mb-6 hover:scale-110 transition ease-in-out delay-150"
+            />
+            <p className="border-b text-black text-sm md:text-base lg:text-base border-black pb-3">
+              {data.description}
+            </p>
+            <p className="border-b font-bold text-black md:text-base lg:text-base text-sm border-black py-3">
+              Technologies: {data.technologies}
+            </p>
+            <div className=" flex justify-start lg:text-3xl text-2xl gap-3 lg:py-2 pt-2 pb-10">
+              <a
+                href={data.link}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:-translate-y-3 hover:scale-110 duration-300"
+              >
+                <BsLink />
+              </a>
+              <a
+                href={data.github}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:-translate-y-3 hover:scale-110 duration-300"
+              >
+                <BsGithub />
+              </a>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

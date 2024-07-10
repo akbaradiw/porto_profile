@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import kuuga from "../../assets/path3356.png";
-import flower from "../../assets/rainbow_flower.png";
-import "./style.css";
+import { NavLink } from "react-router-dom";
+import { IoHomeOutline } from "react-icons/io5";
+import { GoProjectRoadmap } from "react-icons/go";
+import { TiContacts } from "react-icons/ti";
+import { VscLaw } from "react-icons/vsc";
+
 const NavbarComp = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -11,93 +13,98 @@ const NavbarComp = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-
   return (
     <div>
-      <nav className="bg-black p-4 fixed w-full top-0 z-10  " id="navbar">
-        <div className="container mx-auto flex justify-between items-center">
-          {/* <div>
-           <img id="flower" src={flower} alt="kuuga" className="w-10" />
-          </div> */}
-          <div className="hidden md:block">
-            <NavLink to="/">
+      <nav
+        className="bg-stone-800  shadow-md lg:p-3 fixed w-full top-0 z-10 "
+        id="navbar"
+      >
+        <div className="lg:flex hidden">
+          <NavLink to="/">
             <a
               href="#"
-              className="text-gray-50 hover:text-yellow-300 px-3 py-2 rounded-md "
+              className="text-stone-800 border-none bg-stone-100 font-semibold hover:text-black   hover:bg-white px-2 py-1 mx-2 rounded-sm "
             >
               Home
             </a>
-            </NavLink>
-            <NavLink className="transition-all duration-300 ease-in-out" to="/about">
+          </NavLink>
+
+          <NavLink to="/project">
             <a
               href="#"
-              className="text-gray-50 hover:text-yellow-300 px-3 py-2 rounded-md  "
-            >
-              About
-            </a>
-            </NavLink>
-            <NavLink to="/project">
-            <a
-              href="#"
-              className="text-gray-50 hover:text-yellow-300 px-3 py-2 rounded-md"
+              className="text-stone-800 border-none bg-blue-300 font-semibold hover:text-black mx-2  hover:bg-white px-2 py-1 rounded-sm "
             >
               Project
             </a>
-            </NavLink>
-
-          </div>
-          <div className="sm:hidden" id="mobile-menu">
-            <button
-              onClick={toggleMobileMenu}
-              className="text-gray-300 hover:text-yellow-300 focus:outline-none"
+          </NavLink>
+          <NavLink to="/contact">
+            <a
+              href="#"
+              className="text-stone-800 border-none bg-red-500 font-semibold hover:text-black mx-2  hover:bg-white px-2 py-1 rounded-sm "
             >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
-            </button>
-          </div>
+              Contact
+            </a>
+          </NavLink>
         </div>
-        {/* Conditional rendering of mobile menu */}
-        {isMobileMenuOpen && (
-          <div className="sm:hidden bg-black" >
-            <div className="px-2 py-3" >
-              <NavLink to="/">
-              <a
-                href="#"
-                className="block text-gray-50 hover:text-yellow-300 px-4 py-2 rounded-md"
+      </nav>
+      <div className="block lg:hidden">
+        <button
+          onClick={() => toggleMobileMenu()}
+          className="text-stone-800 z-50 fixed focus:outline-none hover:cursor-pointer  top-4 left-2 transition-opacity duration-200"
+          type="button"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <nav className="lg:hidden py-9 px-4">
+        <div
+          className={`fixed bottom-0 right-0 left-0 w-full z-50 bg-stone-800 p-4 text-white transition-transform duration-500   ${
+            isMobileMenuOpen ? "translate-y-0" : "translate-y-full"
+          }`}
+        >
+          <ul className="flex justify-between md:justify-around">
+            <li>
+              <NavLink
+                to={"/"}
+                className="flex items-center flex-col justify-center md:text-2xl hover:scale-110 hover:cursor-pointer hover:text-yellow-400"
               >
+                <IoHomeOutline className="text-2xl" />
                 Home
-              </a>
               </NavLink>
-              <NavLink to="/about">
-              <a
-                href="#"
-                className="block text-gray-50 hover:text-yellow-300 px-4 py-2 rounded-md"
+            </li>
+            <li>
+              <NavLink
+                to={"/project"}
+                className="flex items-center flex-col justify-center md:text-2xl hover:scale-110 hover:cursor-pointer hover:text-yellow-400"
               >
-                About
-              </a>
-              </NavLink>
-              <NavLink to="/project">
-              <a
-                href="#"
-                className="block text-gray-50 hover:text-yellow-300 px-4 py-2 rounded-md"
-              >
+                <GoProjectRoadmap className="text-2xl" />
                 Project
-              </a>
               </NavLink>
-            </div>
-          </div>
-        )}
+            </li>
+            <li>
+              <NavLink
+                to={"/contact"}
+                className="flex items-center flex-col justify-center md:text-2xl hover:scale-110 hover:cursor-pointer hover:text-yellow-400"
+              >
+                <TiContacts className="text-2xl" />
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   );

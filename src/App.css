@@ -2,10 +2,7 @@ body {
     /* background-color: rgb(245, 206, 99); */
     margin: 0px;
     padding: 0px;
-    background-image: linear-gradient(
-        to right,
-        rgb(245, 221, 99),
-        rgb(255, 255, 255),
-        rgb(238, 245, 99),
-        rgb(245, 238, 99));
+    /* background-color: rgba(239, 239, 239, 0.863); */
+    background-image: linear-gradient(to right,  rgb(255, 255, 255), rgba(216, 216, 216, 0.911), rgb(204, 204, 204));
+
 }
