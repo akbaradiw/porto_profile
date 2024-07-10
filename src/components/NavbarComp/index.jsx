@@ -23,7 +23,7 @@ const NavbarComp = () => {
           <NavLink to="/">
             <a
               href="#"
-              className="text-stone-800 border-none bg-stone-100 font-semibold hover:text-black   hover:bg-white px-2 py-1 mx-2 rounded-sm "
+              className="text-stone-800 border-none bg-yellow-200 font-semibold hover:text-black   hover:bg-white px-2 py-1 mx-2 rounded-sm "
             >
               Home
             </a>
@@ -32,7 +32,7 @@ const NavbarComp = () => {
           <NavLink to="/project">
             <a
               href="#"
-              className="text-stone-800 border-none bg-blue-300 font-semibold hover:text-black mx-2  hover:bg-white px-2 py-1 rounded-sm "
+              className="text-stone-800 border-none bg-blue-400 font-semibold hover:text-black mx-2  hover:bg-white px-2 py-1 rounded-sm "
             >
               Project
             </a>
