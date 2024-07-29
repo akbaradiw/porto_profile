@@ -3,7 +3,7 @@ import NavbarComp from "../../components/NavbarComp";
 import project1 from "../../assets/LandingPage.png";
 import project2 from "../../assets/Dashboard.png";
 import project3 from "../../assets/simplenote.png";
-import project4 from "../../assets/ecommerce.png";
+import project4 from "../../assets/miniecommerce.png";
 import project5 from "../../assets/tokusatu.png";
 import { BsLink, BsGithub } from "react-icons/bs";
 import AOS from "aos";
