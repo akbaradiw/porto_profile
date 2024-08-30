@@ -1,10 +1,11 @@
 import React from "react";
 import NavbarComp from "../../components/NavbarComp";
-import project1 from "../../assets/LandingPage.png";
+import project1 from "../../assets/binar2.png";
 import project2 from "../../assets/Dashboard.png";
 import project3 from "../../assets/simplenoteupdate.png";
 import project4 from "../../assets/miniecommerce.png";
 import project5 from "../../assets/tokusatu.png";
+import project6 from "../../assets/binar1.png";
 import { BsLink, BsGithub } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -14,18 +15,29 @@ const Project = () => {
   const myproject = [
     {
       id: 1,
-      name: "Car Rental Customer Page",
+      name: "Landing Page/Customer Page Car Rental Web App",
       technologies: "React, Bootstrap, Javascript, Redux Toolkit",
       description:
-        "this project i developed with my team during front end developer bootcamp at binar academy. in this project we tested our knowledge about React, Bootstrap, Javascript, Redux Toolkit.",
+        "This project is a Front End Engineering Bootcamp Individual Final Project (gold level) at Binar Academy. I Create entire web parts from appearance & all function using Bootstrap, CSS, Javascript, & React.This website has filters/product searches and product details features.",
+      image: project6,
+      link: "https://binar-car-rental-phi.vercel.app/",
+      github:
+        "https://github.com/akbaradiw/F-FER23001028-14-AKB-binacarrental-GOLD",
+    },
+    {
+      id: 2,
+      name: "Landing Page/Customer Page Car Rental Web App part 2 ",
+      technologies: "React, Bootstrap, Javascript, Redux Toolkit",
+      description:
+        "This project is the  Front End Engineering Bootcamp Group Final Project (platinum level)  at Binar Academy. This is a continuation of the previous Final project (gold level) by adding a Authentication (login & register), payments features. with my friends we using Bootstrap, CSS, Javascript, React, & Redux Toolkit. In this project I developed on a detailed product of the rental package duration feature.",
       image: project1,
       link: "https://23001028-14-kelompok-4-binar-car-rental-platinum.vercel.app/",
       github:
         "https://github.com/Defriyhdr/23001028_14_Kelompok-4_Binar-Car-Rental-Platinum",
     },
     {
-      id: 2,
-      name: "Car Rental CMS",
+      id: 3,
+      name: "Car Rental CMS/ Admin Page Car Rental Web App",
       technologies: "React, Bootstrap, Javascript, Redux Toolkit",
       description:
         "this another project i developed with my team during front end developer bootcamp at binar academy. in this project i tested and learn more about CRUD feature.",
@@ -35,26 +47,27 @@ const Project = () => {
         "https://github.com/akbaradiw/Admin_23001028_14_Kelompok-4_Binar-Car-Rental-Platinum",
     },
     {
-      id: 3,
+      id: 4,
       name: "Simple Note App",
       technologies: "React, Tailwind, Javascript, Redux Toolkit",
-      description: "i try CRUD with redux toolkit to developed this project.",
+      description:
+        "This dummy todolist web app with responsive design & CRUD (create, read, update, delete) feature.  i made this web using Tailwind, CSS, Javascript, React, & Redux Toolkit",
       image: project3,
       link: "https://simple-note-livid.vercel.app/",
       github: "https://github.com/akbaradiw/crud_redux_toolkit",
     },
     {
-      id: 4,
+      id: 5,
       name: "Mini Ecommerce",
       technologies: "React, Tailwind, Javascript, Redux Toolkit",
       description:
-        "Simple Ecommerce with Add to cart feature. i use API from https://fakestoreapi.com/",
+      "This dummy ecommerce project with responsive design & add to cart feature. i made this web using Tailwind, CSS, Javascript, React, & Redux Toolkit. in this project i use API data from https://fakestoreapi.com/ . ",
       image: project4,
       link: "https://mini-ecommerce-web.vercel.app/",
       github: "https://github.com/akbaradiw/mini-ecommerce",
     },
     {
-      id: 5,
+      id: 6,
       name: "Tokusatsu Hero Agency",
       technologies: "Next Js, Tailwind, Javascript",
       description:
@@ -78,6 +91,10 @@ const Project = () => {
       >
         {myproject.map((data) => (
           <div key={data.id}>
+            <div className="border lg:p-1 p-2 shadow-sm rounded-md mb-4 bg-stone-800 ">
+            <h1 className="lg:text-xl md:text-md text-center font-bold text-white">{data.name}</h1>
+            </div>
+            <div className="flex justify-center">
             <img
               src={data.image}
               alt={data.description}
@@ -85,6 +102,7 @@ const Project = () => {
               height={500}
               className="rounded-lg shadow-lg mb-6 hover:scale-110 transition ease-in-out delay-150"
             />
+            </div>
             <p className="border-b text-black text-sm md:text-base lg:text-base border-black pb-3">
               {data.description}
             </p>
