@@ -6,6 +6,7 @@ import project3 from "../../assets/simplenoteupdate.png";
 import project4 from "../../assets/miniecommerce.png";
 import project5 from "../../assets/tokusatu.png";
 import project6 from "../../assets/binar1.png";
+import project7 from "../../assets/ohanime.png";
 import { BsLink, BsGithub } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -76,6 +77,16 @@ const Project = () => {
       link: "https://tokusatsu-heroes-agency.vercel.app/",
       github: "https://github.com/akbaradiw/Tokusatsu-Heroes-Agency",
     },
+    {
+    id: 7,
+    name: "Oh Anime",
+    technologies: "React Js, Tailwind, Javascript, Zustand",
+    description:
+      "Dummy MyAnimeList.net project with filter, search, pagination, & detail item feature. i made this project with React JS, Tailwind,  & Zustand. i use API from https://jikan.moe/ . ",
+    image: project7,
+    link: "https://oh-anime.vercel.app/",
+    github: "https://github.com/akbaradiw/Anime-List",
+    }
   ];
   useEffect(() => {
     AOS.init();
