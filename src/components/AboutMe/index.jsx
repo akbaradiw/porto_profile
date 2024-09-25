@@ -11,7 +11,7 @@ const AboutMe = () => {
   }, []);
   
   return (
-    <div className="lg:flex lg:justify-between mb-10">
+    <div className=" mb-10">
       <div
         className=" lg:px-40 pt-10 grid px-10 lg:pt-20"
         data-aos ="fade-right" data-aos-duration="1000"
