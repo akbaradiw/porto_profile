@@ -17,9 +17,9 @@ const Project = () => {
     {
       id: 1,
       name: "Landing Page/Customer Page Car Rental Web App",
-      technologies: "React, Bootstrap, Javascript, Redux Toolkit",
+      technologies: "React, Bootstrap, Javascript ",
       description:
-        "This project is a Front End Engineering Bootcamp Individual Final Project (gold level) at Binar Academy. I Create entire web parts from appearance & all function using Bootstrap, CSS, Javascript, & React.This website has filters/product searches and product details features.",
+        "This project is my Individual Final Project (Gold Level) for the Front End Engineering Bootcamp at Binar Academy. I developed all web components, focusing on both appearance and functionality, using Bootstrap, CSS, JavaScript, and React. The website includes features for filtering products, conducting searches, and displaying product details.",
       image: project6,
       link: "https://binar-car-rental-phi.vercel.app/",
       github:
@@ -30,7 +30,7 @@ const Project = () => {
       name: "Landing Page/Customer Page Car Rental Web App part 2 ",
       technologies: "React, Bootstrap, Javascript, Redux Toolkit",
       description:
-        "This project is the  Front End Engineering Bootcamp Group Final Project (platinum level)  at Binar Academy. This is a continuation of the previous Final project (gold level) by adding a Authentication (login & register), payments features. with my friends we using Bootstrap, CSS, Javascript, React, & Redux Toolkit. In this project I developed on a detailed product of the rental package duration feature.",
+        "This project is our Group Final Project (Platinum Level) for the Front End Engineering Bootcamp at Binar Academy. Building upon our previous Gold Level project, we added authentication (login and registration) and payment features. Together with my teammates, we utilized Bootstrap, CSS, JavaScript, React, and Redux Toolkit. In this project, I specifically developed the feature for detailing the duration of rental packages.",
       image: project1,
       link: "https://23001028-14-kelompok-4-binar-car-rental-platinum.vercel.app/",
       github:
@@ -41,7 +41,7 @@ const Project = () => {
       name: "Car Rental CMS/ Admin Page Car Rental Web App",
       technologies: "React, Bootstrap, Javascript, Redux Toolkit",
       description:
-        "this another project i developed with my team during front end developer bootcamp at binar academy. in this project i tested and learn more about CRUD feature.",
+        "This project serves as our Group Final Project (Platinum Level) for the Front End Engineering Bootcamp at Binar Academy. The website is designed for admins to manage vehicle order data, featuring charts and tables for viewing order information, as well as login/register and CRUD (create, read, update, delete) functionalities. Alongside my teammate, we utilized Bootstrap, CSS, JavaScript, React, and Redux Toolkit. In this project, I focused on developing the Create, Update, and Delete features.",
       image: project2,
       link: "https://admin-23001028-14-kelompok-4-binar-car-rental-platinum.vercel.app/",
       github:
@@ -52,7 +52,7 @@ const Project = () => {
       name: "Simple Note App",
       technologies: "React, Tailwind, Javascript, Redux Toolkit",
       description:
-        "This dummy todolist web app with responsive design & CRUD (create, read, update, delete) feature.  i made this web using Tailwind, CSS, Javascript, React, & Redux Toolkit",
+        "Dummy todolist web app with responsive design & CRUD (create, read, update, delete) feature. I developed the website using Tailwind CSS, JavaScript, React, and Redux Toolkit.",
       image: project3,
       link: "https://simple-note-livid.vercel.app/",
       github: "https://github.com/akbaradiw/crud_redux_toolkit",
@@ -62,7 +62,7 @@ const Project = () => {
       name: "Mini Ecommerce",
       technologies: "React, Tailwind, Javascript, Redux Toolkit",
       description:
-      "This dummy ecommerce project with responsive design & add to cart feature. i made this web using Tailwind, CSS, Javascript, React, & Redux Toolkit. in this project i use API data from https://fakestoreapi.com/ . ",
+        "Dummy e-commerce project features a responsive design and  Add to Cart feature. I developed the website using Tailwind CSS, JavaScript, React, and Redux Toolkit, utilizing API data from https://fakestoreapi.com/. ",
       image: project4,
       link: "https://mini-ecommerce-web.vercel.app/",
       github: "https://github.com/akbaradiw/mini-ecommerce",
@@ -72,21 +72,21 @@ const Project = () => {
       name: "Tokusatsu Hero Agency",
       technologies: "Next Js, Tailwind, Javascript",
       description:
-        "Landing page with filter features. i developed this to learn about use next js. data in this website is a dummy data.",
+        "The Hero Agency landing page is inspired by 911 emergency services & Tokusatsu Heroes, featuring filter options and a responsive design. I developed this project to learn how to use Next.js, and the data on the website consists of dummy information..",
       image: project5,
       link: "https://tokusatsu-heroes-agency.vercel.app/",
       github: "https://github.com/akbaradiw/Tokusatsu-Heroes-Agency",
     },
     {
-    id: 7,
-    name: "Oh Anime",
-    technologies: "React Js, Tailwind, Javascript, Zustand",
-    description:
-      "Dummy MyAnimeList.net project with filter, search, pagination, & detail item feature. i made this project with React JS, Tailwind,  & Zustand. i use API from https://jikan.moe/ . ",
-    image: project7,
-    link: "https://oh-anime.vercel.app/",
-    github: "https://github.com/akbaradiw/Anime-List",
-    }
+      id: 7,
+      name: "Oh Anime",
+      technologies: "React Js, Tailwind, Javascript, Zustand",
+      description:
+        "Dummy MyAnimeList.net project with filter, search, pagination, & detail item feature. i developed this project with React JS, Tailwind, & Zustand. i use API from https://jikan.moe/ . ",
+      image: project7,
+      link: "https://oh-anime.vercel.app/",
+      github: "https://github.com/akbaradiw/Anime-List",
+    },
   ];
   useEffect(() => {
     AOS.init();
@@ -103,18 +103,20 @@ const Project = () => {
         {myproject.map((data) => (
           <div key={data.id}>
             <div className="border lg:p-1 p-2 shadow-sm rounded-md mb-4 bg-stone-800 ">
-            <h1 className="lg:text-xl md:text-md text-center font-bold text-white">{data.name}</h1>
+              <h1 className="lg:text-xl md:text-md text-center  font-bold text-white">
+                {data.name}
+              </h1>
             </div>
             <div className="flex justify-center">
-            <img
-              src={data.image}
-              alt={data.description}
-              width={500}
-              height={500}
-              className="rounded-lg shadow-lg mb-6 hover:scale-110 transition ease-in-out delay-150"
-            />
+              <img
+                src={data.image}
+                alt={data.description}
+                width={500}
+                height={500}
+                className="rounded-lg shadow-lg mb-6 hover:scale-110 transition ease-in-out delay-150"
+              />
             </div>
-            <p className="border-b text-black text-sm md:text-base lg:text-base border-black pb-3">
+            <p className="border-b text-black  text-sm md:text-base lg:text-base border-black pb-3">
               {data.description}
             </p>
             <p className="border-b font-bold text-black md:text-base lg:text-base text-sm border-black py-3">
